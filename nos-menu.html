@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="nos-menu.css">
+  <title>Cuisine Péruvienne</title>
+</head>
+<body>
+  <header>
+    <nav>
+        <img src="./Photos/logo-2.png" alt="Logo Cuisine Péruvienne" class="logo">
+      <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="nos-menu.html">Nos menus</a></li>
+        <li><a href="formulaire.html">Formulaire</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Nos menus</h1>
+    <section class="menu-section">
+      <p>Découvrez nos plats traditionnels péruviens. Cliquez sur “Commander” pour voir les ingrédients.</p>
+
+      <section class="grid-container">
+        <article class="plat">
+          <img src="./Photos/ceviche.jpg" alt="Ceviche">
+          <h2>Ceviche</h2>
+          <p>Poisson cru mariné au citron vert, oignon rouge et coriandre.</p>
+          <button type="button" onclick="toggleIngredients('ceviche')">Commander</button>
+          <aside id="ceviche" class="ingredients" aria-label="Ingrédients du plat Ceviche">
+            <ul>
+              <li>Poisson blanc frais</li>
+              <li>Citron vert</li>
+              <li>Oignon rouge</li>
+              <li>Coriandre</li>
+              <li>Piment</li>
+            </ul>
+          </aside>
+        </article>
+
+        <article class="plat">
+          <img src="./Photos/lomo-saltado.jpg" alt="Lomo Saltado">
+          <h2>Lomo Saltado</h2>
+          <p>Sauté de bœuf avec oignons, tomates et frites.</p>
+          <button  type="button" onclick="toggleIngredients('lomo')">Commander</button>
+          <aside id="lomo" class="ingredients" aria-label="Ingrédients du plat Lomo Saltado">
+            <ul>
+              <li>Bœuf</li>
+              <li>Oignon</li>
+              <li>Tomate</li>
+              <li>Pomme de terre</li>
+              <li>Sauce soja</li>
+            </ul>
+          </aside>
+        </article>
+
+        <article class="plat">
+          <img src="./Photos/causa.jpg" alt="Causa Rellena">
+          <h2>Causa Rellena</h2>
+          <p>Purée de pommes de terre farcie au poulet ou au thon.</p>
+          <button type="button" onclick="toggleIngredients('causa')">Commander</button>
+          <aside id="causa" class="ingredients" aria-label="Ingrédients du plat du Causa Rellena">
+            <ul>
+              <li>Pomme de terre jaune</li>
+              <li>Citron</li>
+              <li>Ají amarillo</li>
+              <li>Avocat</li>
+              <li>Thon ou poulet</li>
+            </ul>
+          </aside>
+        </article>
+
+        <article class="plat">
+          <img src="./Photos/huancaina.jpg" alt="Causa Rellena">
+          <h2>Papa a la Huancaina</h2>
+          <p>Purée de pommes de terre farcie au poulet ou au thon.</p>
+          <button type="button" onclick="toggleIngredients('causa')">Commander</button>
+          <aside id="huancaina" class="ingredients" aria-label="Ingrédients du plat Huancaina">
+            <ul>
+              <li>Pomme de terre jaune</li>
+              <li>Citron</li>
+              <li>Ají amarillo</li>
+              <li>Avocat</li>
+              <li>olive</li>
+            </ul>
+          </aside>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>©© 2025 Cuisine Péruvienne | Tous droits réservés</p>
+  </footer>
+
+  <script>
+    function toggleIngredients(id) {
+      const aside = document.getElementById(id);
+      aside.style.display = aside.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
+
